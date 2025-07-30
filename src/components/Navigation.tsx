@@ -20,7 +20,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/+918533333?text=Hello! I want to know more about Disha Class.', '_blank');
+    window.open('https://wa.me/+918540890133?text=Hello! I want to know more about Disha Class.', '_blank');
   };
 
   return (

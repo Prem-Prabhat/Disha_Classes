@@ -29,7 +29,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 98765 43210", "Available: 9 AM - 8 PM", "Monday to Saturday"],
+      details: ["Parsad vigah, NearBy - Narad Museum Nawadah, Bihar 805110"],
       action: "Call Now",
       color: "text-success"
     },
@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      details: ["+91 98765 43210", "Instant responses", "Share documents easily"],
+      details: ["+918540890133", "Instant responses", "Share documents easily"],
       action: "Chat Now",
       color: "text-green-600"
     }
@@ -102,11 +102,11 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/+919876543210?text=Hello! I want to know more about Disha Class.', '_blank');
+    window.open('https://wa.me/+918540890133?text=Hello! I want to know more about Disha Class.', '_blank');
   };
 
   const handleCall = () => {
-    window.open('tel:+919876543210', '_self');
+    window.open('tel:+918540890133', '_self');
   };
 
   const handleEmail = () => {
@@ -114,7 +114,7 @@ const Contact = () => {
   };
 
   const handleDirections = () => {
-    window.open('https://maps.google.com/?q=123+Education+Street+Knowledge+City', '_blank');
+    window.open('https://maps.google.com/?q=Disha+Class+Nawadah', '_blank');
   };
 
   const getActionHandler = (title: string) => {

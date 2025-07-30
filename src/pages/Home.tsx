@@ -77,7 +77,7 @@ const Home = () => {
   ];
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/+919876543210?text=Hi! I\'m interested in classes at Disha Class. Can you share more info?', '_blank');
+    window.open('https://wa.me/+918540890133?text=Hi! I\'m interested in classes at Disha Class. Can you share more info?', '_blank');
   };
 
   return (
@@ -293,10 +293,10 @@ const Home = () => {
             </Link>
             <Button
               variant="outline"
-              className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary"
+              className="bg-transparent text-lg px-8 py-4 border border-white text-white hover:bg-white hover:text-primary transition-colors duration-200"
               onClick={handleWhatsApp}
             >
-              Call Now: +91 98765 43210
+              Call Now: +91 85408 90133
             </Button>
           </div>
         </div>

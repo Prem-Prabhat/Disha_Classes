@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/+919876543210?text=Hello! I want to know more about Disha Class.', '_blank');
+    window.open('https://wa.me/+918540890133?text=Hello! I want to know more about Disha Class.', '_blank');
   };
 
   return (
@@ -68,11 +68,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5 text-primary-glow" />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">+918540890133</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-primary-glow" />
-                <span className="text-sm">info@dishaclass.com</span>
+                <span className="text-sm">dishaclassesnawada@gmail.com</span>
               </div>
             </div>
 
@@ -80,13 +80,13 @@ const Footer = () => {
             <div className="mt-6">
               <h4 className="font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-3">
-                <a href="#" className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors">
+                <a href="https://www.youtube.com/@dishaclasses52" target='_blank' className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors">
                   <Youtube className="w-4 h-4" />
                 </a>
-                <a href="#" className="bg-pink-600 p-2 rounded-full hover:bg-pink-700 transition-colors">
+                <a href="https://www.instagram.com/dishaclassesnawada/" target='_blank' className="bg-pink-600 p-2 rounded-full hover:bg-pink-700 transition-colors">
                   <Instagram className="w-4 h-4" />
                 </a>
-                <a href="#" className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors">
+                <a href="https://www.facebook.com/DishaClassesNawadah" target='_blank' className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors">
                   <Facebook className="w-4 h-4" />
                 </a>
               </div>
