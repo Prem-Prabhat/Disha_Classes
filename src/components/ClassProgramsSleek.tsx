@@ -1,37 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, GraduationCap, Trophy, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { easeInOut } from "framer-motion";
-
+import { ClassLevels } from '@/data/data';
 
 
 // Class levels data
-const classLevels = [
-  {
-    title: "Class 10th",
-    subjects: "Math & Science",
-    description: "Build a rock-solid foundation of core concepts to excel in your board exams.",
-    icon: BookOpen,
-    accentColor: "from-blue-500 to-blue-400",
-  },
-  {
-    title: "Class 11th",
-    subjects: "Math & Science",
-    description: "Master advanced topics and develop the right strategy for competitive exams.",
-    icon: GraduationCap,
-    accentColor: "from-purple-500 to-purple-400",
-  },
-  {
-    title: "Class 12th",
-    subjects: "Math & Science",
-    description: "Intensive preparation to help you score high in boards and secure your future.",
-    icon: Trophy,
-    accentColor: "from-green-500 to-green-400",
-  }
-];
+const classLevels = ClassLevels;
 
 // Animation variants
 const containerVariants = {

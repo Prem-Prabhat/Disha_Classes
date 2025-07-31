@@ -1,44 +1,18 @@
-import { Link } from 'react-router-dom';
-import {
-  BookOpen, Users, Trophy, Star, Play, ArrowRight,
-  GraduationCap, Target, Clock,
-  CheckCircle
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { motion } from 'framer-motion';
-import classroomEnvironment from '@/assets/classroom-environment.jpg';
-import HeroSection from '@/components/HeroSection';
-import ClassProgramsMinimalist from '@/components/ClassProgramsSleek';
-import VideoCard from '@/components/VideoCard';
-import TestimonialsCarousel from '@/components/TestimonialCarousel';
-
+import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import classroomEnvironment from "@/assets/classroom-environment.jpg";
+import HeroSection from "@/components/HeroSection";
+import ClassProgramsMinimalist from "@/components/ClassProgramsSleek";
+import VideoCard from "@/components/VideoCard";
+import TestimonialsCarousel from "@/components/TestimonialCarousel";
+import { Features, Videos } from "@/data/data";
 
 const Home = () => {
 
   // Features data
-  const features = [
-    {
-      icon: Users,
-      title: "Expert Teachers",
-      description: "Learn from experienced and caring faculty."
-    },
-    {
-      icon: Target,
-      title: "Focused Learning",
-      description: "Smart strategies for board exam success."
-    },
-    {
-      icon: Clock,
-      title: "Flexible Batches",
-      description: "Choose batch timing that suits your schedule."
-    },
-    {
-      icon: Trophy,
-      title: "Top Results",
-      description: "Our students consistently perform at the top."
-    }
-  ];
+  const features = Features;
 
   // Animation variants for the container
   const sectionVariants = {
@@ -57,78 +31,26 @@ const Home = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  // Animation variants for individual cards
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  
-  // Animation Variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   // YouTube video data
-  const videos = [
-    {
-      videoId: 'wajPbbu__UY',
-      title: 'Class 10th – Quadratic Equations',
-      description: 'Learn how we simplify complex topics with easy-to-follow explanations.'
-    },
-    {
-      videoId: 'v9JJJV91ZCg',
-      title: 'Class 12th – Modern Physics',
-      description: 'Understand difficult science laws with practical, real-world examples.'
-    }
-  ];
-
-  // Testimonials data
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      class: "Class 12th",
-      score: "95%",
-      text: "Disha Class helped me score high with smart and simple learning."
-    },
-    {
-      name: "Rahul Kumar",
-      class: "Class 10th",
-      score: "92%",
-      text: "Great teaching and easy to understand concepts."
-    },
-    {
-      name: "Anita Singh",
-      class: "Class 11th",
-      score: "90%",
-      text: "Best place to learn Math and Science deeply."
-    }
-  ];
+  const videos = Videos;
 
   // WhatsApp link handler
   const handleWhatsApp = () => {
-    window.open('https://wa.me/+918540890133?text=Hi! I\'m interested in classes at Disha Class. Can you share more info?', '_blank');
+    window.open(
+      "https://wa.me/+918540890133?text=Hi! I'm interested in classes at Disha Class. Can you share more info?",
+      "_blank"
+    );
   };
 
   // A simple functional component for the background pattern
   const BackgroundPattern = () => (
-    <div className="absolute inset-0 w-full h-full opacity-10" style={{
-      backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
-      backgroundSize: '32px 32px',
-    }}></div>
+    <div
+      className="absolute inset-0 w-full h-full opacity-10"
+      style={{
+        backgroundImage: "radial-gradient(#fff 2px, transparent 2px)",
+        backgroundSize: "32px 32px",
+      }}
+    ></div>
   );
   return (
     <div className="min-h-screen">
@@ -152,7 +74,9 @@ const Home = () => {
               Why Choose <span className="text-blue-600">Disha Class?</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Every student can shine with the right guidance. We combine clear teaching, regular practice, and personal support to unlock your true potential.
+              Every student can shine with the right guidance. We combine clear
+              teaching, regular practice, and personal support to unlock your
+              true potential.
             </p>
           </motion.div>
 
@@ -191,8 +115,12 @@ const Home = () => {
                     <feature.icon className="w-7 h-7" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-1">{feature.title}</h3>
-                    <p className="text-gray-600 text-base">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-gray-800 mb-1">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 text-base">
+                      {feature.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -203,10 +131,9 @@ const Home = () => {
 
       {/* our classes */}
       <section className="pb-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-        <ClassProgramsMinimalist/>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ClassProgramsMinimalist />
         </div>
-          
       </section>
 
       {/* YouTube Previews */}
@@ -224,7 +151,8 @@ const Home = () => {
               See Our Teaching in <span className="text-blue-600">Action</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Get a feel for our engaging and effective teaching style. Watch a preview of our actual classes.
+              Get a feel for our engaging and effective teaching style. Watch a
+              preview of our actual classes.
             </p>
           </motion.div>
 
@@ -258,7 +186,6 @@ const Home = () => {
       <section className="relative py-24 bg-gradient-to-br from-blue-700 via-blue-500 to-sky-500 text-white overflow-hidden">
         <BackgroundPattern />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -270,7 +197,8 @@ const Home = () => {
               Ready to Unlock Your Potential?
             </h2>
             <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto">
-              Your journey towards better marks and deeper understanding starts with a single step.
+              Your journey towards better marks and deeper understanding starts
+              with a single step.
             </p>
           </motion.div>
 
@@ -282,11 +210,22 @@ const Home = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <h3 className="text-2xl font-bold text-yellow-300 mb-4">Book Your Free Demo Class</h3>
+            <h3 className="text-2xl font-bold text-yellow-300 mb-4">
+              Book Your Free Demo Class
+            </h3>
             <div className="flex flex-col sm:flex-row justify-center gap-x-6 gap-y-2 text-gray-200 mb-8">
-              <div className="flex items-center justify-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /><span>1-on-1 with an Expert</span></div>
-              <div className="flex items-center justify-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /><span>Clear Your Doubts</span></div>
-              <div className="flex items-center justify-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /><span>No Obligation</span></div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>1-on-1 with an Expert</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>Clear Your Doubts</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>No Obligation</span>
+              </div>
             </div>
             <Link to="/admission">
               <Button className="w-full sm:w-auto text-lg px-10 py-6 bg-yellow-400 text-gray-900 font-bold hover:bg-yellow-500 transition-transform duration-300 ease-in-out hover:scale-105 rounded-lg shadow-lg">

@@ -4,38 +4,10 @@ import { motion } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import type { CustomArrowProps } from 'react-slick';
+import { Testimonials } from '@/data/data';
 
 // --- Testimonials Data ---
-const testimonials = [
-    {
-        name: "Priya Sharma",
-        class: "Class 12th Topper",
-        score: "95%",
-        text: "The personalized attention and smart teaching methods at Disha Class were game-changing. I finally understood concepts that I struggled with for years!",
-        avatar: 'https://i.pravatar.cc/150?img=1',
-    },
-    {
-        name: "Rahul Kumar",
-        class: "Class 10th Achiever",
-        score: "92%",
-        text: "The teachers here are incredibly supportive and make learning fun. The regular tests helped me build confidence and manage my time effectively during the board exams.",
-        avatar: 'https://i.pravatar.cc/150?img=3',
-    },
-    {
-        name: "Anjali Singh",
-        class: "Class 11th Foundation",
-        score: "90%",
-        text: "Disha Class is the best place to build a strong foundation for Math and Science. The concepts are taught with such clarity that it makes preparing for future exams much easier.",
-        avatar: 'https://i.pravatar.cc/150?img=5',
-    },
-    {
-        name: "Vikram Reddy",
-        class: "Class 12th Achiever",
-        score: "94%",
-        text: "The study materials and mock tests were extremely helpful. The faculty is always available to clear doubts, which made a huge difference in my preparation.",
-        avatar: 'https://i.pravatar.cc/150?img=7',
-    }
-];
+const testimonials = Testimonials
 
 const NextArrow = (props: CustomArrowProps) => {
     const { className, style, onClick } = props;
