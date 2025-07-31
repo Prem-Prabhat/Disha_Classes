@@ -3,6 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -11,6 +13,7 @@ import Classes from "./pages/Classes";
 import Admission from "./pages/Admission";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+
 
 const queryClient = new QueryClient();
 
