@@ -53,7 +53,7 @@ const Home = () => {
     ></div>
   );
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" id="home">
       {/* Hero Section */}
       <section className="relative min-h-screen w-full overflow-hidden">
         <HeroSection />

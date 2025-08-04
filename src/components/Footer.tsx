@@ -71,7 +71,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-1 text-blue-400 flex-shrink-0" />
                 <span className="text-base">
-                  Parsad Vigah, Near Narad Museum, Nawadah, Bihar 805110
+                  Prasad Bigha, Near Narad Museum, Nawada, Bihar 805110
                 </span>
               </div>
               <div className="flex items-center space-x-3">

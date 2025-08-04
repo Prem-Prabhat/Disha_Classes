@@ -1,10 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
-import { cn } from "@/lib/utils"; // If you're using ShadCN utility for class merging
+import { cn } from "@/lib/utils";
+
+interface ImageItem {
+    src: string;
+    alt: string;
+}
 
 interface CarouselProps {
-    images: string[]; // Array of image URLs
-    className?: string; // Optional Tailwind/utility class override
+    images: ImageItem[]; // Accepts array of objects with src and alt
+    className?: string;
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
@@ -24,17 +29,18 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
     return (
         <div className={cn("w-full h-full overflow-hidden", className)}>
             <Slider {...sliderSettings}>
-                {images.map((imgSrc, index) => (
+                {images.map(({ src, alt }, index) => (
                     <div key={index} className="relative w-full h-screen">
                         <img
-                            src={imgSrc}
-                            alt={`Slide ${index + 1}`}
+                            src={src}
+                            alt={alt}
                             className="w-full h-full object-cover"
                             onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                                 const target = e.target as HTMLImageElement;
-                                target.onerror = null;
-                                target.src = "/placeholder.png";
+                                target.onerror = null; // prevent infinite loop
+                                target.src = "/placeholder.png"; // fallback image if original fails
                             }}
+                            loading="lazy" // Lazy loading for performance
                         />
                     </div>
                 ))}
